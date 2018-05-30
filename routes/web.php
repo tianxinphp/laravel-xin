@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('hello', function () {
+Route::post('hello', function () {
     return 'Hello, Welcome to LaravelAcademy.org';
 });
