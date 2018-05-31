@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 
-Route::match(['post','get'],'hello',function (){
+Route::post('world',function (){
    return 'hello world';
+});
+
+Route::get('hello',function (){
+    return '<form method="POST" action="/world">' . csrf_field() . '<button type="submit">提交</button></form>';
 });
