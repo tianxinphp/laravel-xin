@@ -24,3 +24,9 @@ Route::get('view/{name?}/{id?}',function ($website='laravel-xin',$id='333'){
 Route::get('index', function () {
     return redirect()->route('index');
 });
+
+Route::prefix('/xin')->group(function (){
+    Route::get('index', function () {
+        return redirect()->route('index');
+    });
+});
