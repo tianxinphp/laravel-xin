@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 
 
-Route::get('view',function (){
-    return view('welcome',['website'=>'laravel-xin']);
+Route::get('view/{name}',function ($website='laravel-xin'){
+    return view('welcome',['website'=>$website]);
 });
