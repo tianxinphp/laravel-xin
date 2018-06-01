@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-//    return view('welcome');
-    redirect()->route('index');
-});
+
 
 
 
 Route::get('view/{name?}/{id?}',function ($website='laravel-xin',$id='333'){
     return 'you route to'.route('index',['website'=>$website,'id'=>$id]);
 })->name('index');
+
+Route::get('/', function () {
+//    return view('welcome');
+    redirect()->route('index');
+});
