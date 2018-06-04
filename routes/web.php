@@ -29,4 +29,4 @@ Route::prefix('/xin')->group(function (){
     Route::get('index', function () {
         return redirect()->route('index');
     });
-});
+})->middleware('token');
