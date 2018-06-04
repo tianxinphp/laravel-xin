@@ -30,3 +30,5 @@ Route::prefix('/xin')->middleware('token')->group(function (){
         return redirect()->route('index');
     });
 });
+
+Route::get('user/{id}','UserController@show');
