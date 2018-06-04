@@ -23,7 +23,7 @@ Route::get('view/{name?}/{id?}',function ($website='laravel-xin',$id='333'){
 
 Route::get('index', function () {
     return response('Hello World', 200)
-        ->header('Content-Type', 'text/plain');
+        ->header('Content-Type', 'application/json');
 });
 
 Route::prefix('/xin')->middleware('token')->group(function (){
