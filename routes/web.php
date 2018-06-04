@@ -25,8 +25,8 @@ Route::get('index', function () {
     return redirect()->route('index');
 });
 
-Route::prefix('/xin')->group(function (){
+Route::prefix('/xin')->group(['middleware'=>'token'],function (){
     Route::get('index', function () {
         return redirect()->route('index');
     });
-})->middleware('token');
+});
