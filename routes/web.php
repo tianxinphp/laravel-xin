@@ -22,7 +22,8 @@ Route::get('view/{name?}/{id?}',function ($website='laravel-xin',$id='333'){
 })->name('index');
 
 Route::get('index', function () {
-    return redirect()->route('index');
+    return response('Hello World', 200)
+        ->header('Content-Type', 'text/plain');
 });
 
 Route::prefix('/xin')->middleware('token')->group(function (){
