@@ -33,3 +33,10 @@ Route::prefix('/xin')->middleware('token')->group(function (){
 });
 
 Route::get('user/{id}','UserController@show');
+
+Route::get('cookie/response', function() {
+    Cookie::queue(Cookie::make('site', 'Laravel学院',1));
+    Cookie::queue('author', '学院君', 1);
+    return response('Hello Laravel', 200)
+        ->header('Content-Type', 'text/plain');
+});
