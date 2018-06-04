@@ -40,3 +40,10 @@ Route::get('cookie/response', function() {
     return response('Hello Laravel', 200)
         ->header('Content-Type', 'text/plain');
 });
+
+
+Route::get('/blade',function (){
+    return view('layouts/child');
+});
+
+
