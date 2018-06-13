@@ -20,7 +20,7 @@ class PostController extends Controller
     }
 
     public function show(){
-
+        return view("post/show");
     }
 
     public function edit(){
