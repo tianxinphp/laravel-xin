@@ -22,11 +22,11 @@ Route::group(['prefix'=>'posts'],function (){
     //文章详情
     Route::get('/{post}','PostController@show');
     //创建
-    Route::get('/create','PostController@create');
+    Route::get('create','PostController@create');
     Route::post('/','PostController@store');
     //编辑
     Route::get('/{post}/edit','PostController@edit');
     Route::post('/{post}','PostController@update');
     //删除
-    Route::get('/delete','PostController@delete');
+    Route::get('delete','PostController@delete');
 });
