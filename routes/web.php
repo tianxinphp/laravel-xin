@@ -16,17 +16,15 @@ Route::get('/', function () {
 });
 
 
-Route::group(['prefix'=>'posts'],function (){
-    //文章列表
-    Route::get('/','PostController@index');
-    //文章详情
-    Route::get('/{post}','PostController@create');
-    //创建
-    Route::get('/create','PostController@create');
-    Route::post('/','PostController@store');
-    //编辑
-    Route::get('/{post}/edit','PostController@edit');
-    Route::post('/{post}','PostController@update');
-    //删除
-    Route::get('delete','PostController@delete');
-});
+//文章列表
+Route::get('/posts','PostController@index');
+//文章详情
+Route::get('/posts/{post}','PostController@show');
+//创建
+Route::get('/posts/create','PostController@create');
+Route::post('/posts','PostController@store');
+//编辑
+Route::get('/posts/{post}/edit','PostController@edit');
+Route::put('/posts/{post}','PostController@update');
+//删除
+Route::get('/posts/delete','PostController@delete');
