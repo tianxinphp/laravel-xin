@@ -11,15 +11,15 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
 //文章列表
 Route::get('/posts','PostController@index');
 //文章详情
-Route::get('/posts/{id}','PostController@show');
+//Route::get('/posts/{id}','PostController@show');
 //创建
 Route::get('/posts/create','PostController@create');
 Route::post('/posts','PostController@store');
