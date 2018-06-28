@@ -19,12 +19,14 @@ Route::get('/', function () {
 //文章列表
 Route::get('/posts','PostController@index');
 //文章详情
-//Route::get('/posts/{id}','PostController@show');
-//创建
 Route::get('/posts/create','PostController@create');
+Route::get('/posts/{id}','PostController@show');
+//创建
 Route::post('/posts','PostController@store');
 //编辑
 Route::get('/posts/{post}/edit','PostController@edit');
 Route::put('/posts/{post}','PostController@update');
 //删除
 Route::get('/posts/delete','PostController@delete');
+
+
