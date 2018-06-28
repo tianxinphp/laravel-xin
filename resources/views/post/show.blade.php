@@ -80,7 +80,7 @@
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
                 <div style="display:inline-flex">
-                    <h2 class="blog-post-title">你好你好</h2>
+                    <h2 class="blog-post-title">@if(!$isShow){{$title1}}@else{{$title2}}@endif</h2>
                     <a style="margin: auto"  href="/posts/62/edit">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                     </a>

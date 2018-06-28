@@ -20,7 +20,7 @@ class PostController extends Controller
     }
 
     public function show(){
-        return view("post/show");
+        return view("post/show",['title'=>'标题1','title2'=>'标题2','isShow'=>true]);
     }
 
     public function edit(){
