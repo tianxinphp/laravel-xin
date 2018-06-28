@@ -24,7 +24,7 @@ class PostController extends Controller
     }
 
     public function edit(){
-
+        return view("post/edit");
     }
 
     public function update(){
