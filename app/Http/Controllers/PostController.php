@@ -20,7 +20,10 @@ class PostController extends Controller
     }
 
     public function show(){
-        return view("post/show",['title1'=>'标题1','title2'=>'标题2','isShow'=>true]);
+        $title1='标题1';
+        $title2='标题2';
+        $isShow=true;
+        return view("post/show",compact('title1','title2','isShow'));
     }
 
     public function edit(){
