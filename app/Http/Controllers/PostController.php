@@ -8,7 +8,7 @@ class PostController extends Controller
 {
     //
     public function index(){
-        $posts=Post::orderBy('create_at','desc')->get();
+        $posts=Post::orderBy('created_at','desc')->get();
         return view("post/index",compact('posts'));
     }
 
