@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('1')
+@section('content')
 <div class="col-sm-8 blog-main">
     <div>
         <div id="carousel-example" class="carousel slide" data-ride="carousel">
