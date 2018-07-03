@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('/posts','PostController@index');
 //文章详情
 Route::get('/posts/create','PostController@create');
-Route::get('/posts/{id}','PostController@show');
+Route::get('/posts/{post}','PostController@show');
 //创建
 Route::post('/posts','PostController@store');
 //编辑
