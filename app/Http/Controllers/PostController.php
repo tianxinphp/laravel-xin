@@ -20,8 +20,8 @@ class PostController extends Controller
         $post=new Post();
         $post->title=request('title');
         $post->content=request('content');
-        $result=$post->save();
-        dd($result);
+        $post->save();
+        return redirect('/posts');
     }
 
     public function show(Post $post){
