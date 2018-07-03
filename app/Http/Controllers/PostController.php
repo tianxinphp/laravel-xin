@@ -17,8 +17,11 @@ class PostController extends Controller
     }
 
     public function store(){
-        $post=Post::create(request(['title','content']));
-        dd($post);
+        $post=new Post();
+        $post->title=request('title');
+        $post->content=request('content');
+        $result=$post->save();
+        dd($result);
     }
 
     public function show(Post $post){
