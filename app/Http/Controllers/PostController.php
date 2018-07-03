@@ -19,6 +19,8 @@ class PostController extends Controller
         $this->validate(request(),[
             'title' => 'required|unique:posts|max:100',
             'content' => 'required',
+        ],[
+            'title.required'=>"标题不能为空"
         ]);
         $post=new Post();
         $post->title=request('title');
