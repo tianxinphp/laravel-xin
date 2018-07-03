@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use Illuminate\Http\Request;
 class PostController extends Controller
 {
     //
@@ -16,8 +15,8 @@ class PostController extends Controller
         return view("post/create");
     }
 
-    public function store(Request $request){
-        $validatedData = $request->validate([
+    public function store(){
+        $this->validate(request(),[
             'title' => 'required|unique:posts|max:100',
             'content' => 'required',
         ]);
