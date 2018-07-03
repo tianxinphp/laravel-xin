@@ -40,7 +40,7 @@
                 <p class="blog-post-meta">赞 0  | 评论 0</p>
             </div>
         @endforeach
-        {{$post->links()}}
+        {{$posts->links()}}
     </div><!-- /.blog-main -->
 </div>
 @endsection
