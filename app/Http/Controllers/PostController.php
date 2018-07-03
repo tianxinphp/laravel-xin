@@ -17,7 +17,7 @@ class PostController extends Controller
     }
 
     public function store(){
-
+        dd(\Request::all());
     }
 
     public function show(Post $post){
