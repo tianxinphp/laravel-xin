@@ -30,7 +30,4 @@ Route::put('/posts/{post}','PostController@update');
 Route::get('/posts/delete','PostController@delete');
 
 //上传
-//Route::post('/posts/image/upload','PostController@imageUpload');
-Route::post('/posts/image/upload',function (){
-    dd(request()->all());
-});
+Route::post('/posts/image/upload','PostController@imageUpload');
