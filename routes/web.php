@@ -29,4 +29,6 @@ Route::put('/posts/{post}','PostController@update');
 //删除
 Route::get('/posts/delete','PostController@delete');
 
+//上传
+Route::post('/posts/image/upload','PostController@upload');
 

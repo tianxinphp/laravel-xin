@@ -42,4 +42,8 @@ class PostController extends Controller
     public function delete(){
 
     }
+
+    public function upload(){
+        dd(request()->all());
+    }
 }
