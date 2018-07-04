@@ -37,8 +37,15 @@ class PostController extends Controller
         return view("post/edit",compact('post'));
     }
 
-    public function update(){
-
+    public function update(Post $post){
+        $this->validate(request(),[
+            'title' => 'required|unique:posts|max:100',
+            'content' => 'required',
+        ]);
+        $post->title=request('title');
+        $post->content=request('content');
+        $post->save();
+        return redirect('/posts');
     }
 
     public function delete(){
