@@ -47,6 +47,6 @@ class PostController extends Controller
 
     public function imageUpload(Request $request){
         $path=$request->file('wangEditorH5File')->storePublicly(md5(time()));
-        dd($path);
+        dd(asset('storage/'.$path));
     }
 }
