@@ -1,14 +1,6 @@
 @extends('layout.main')
 @section('content')
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    @include('layout.error')
     <div class="col-sm-8 blog-main">
         <form action="/posts" method="POST">
             {{csrf_field()}}

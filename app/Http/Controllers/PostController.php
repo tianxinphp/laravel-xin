@@ -33,8 +33,8 @@ class PostController extends Controller
         return view("post/show",compact('post'));
     }
 
-    public function edit(){
-        return view("post/edit");
+    public function edit(Post $post){
+        return view("post/edit",compact('post'));
     }
 
     public function update(){
