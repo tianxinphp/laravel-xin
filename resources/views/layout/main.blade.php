@@ -54,7 +54,7 @@
 <script type="text/javascript" src="/js/wangEditor.min.js"></script>
 <script type="text/javascript">
     var E = window.wangEditor;
-    var editor = new E('#editor');
+    var editor = new E('#content');
     editor.create();
 </script>
 {{--<script src="/js/ylaravel.js"></script>--}}
