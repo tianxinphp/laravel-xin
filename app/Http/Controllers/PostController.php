@@ -48,8 +48,9 @@ class PostController extends Controller
         return redirect('/posts');
     }
 
-    public function delete(){
-
+    public function delete(Post $post){
+        $post->delete();
+        return redirect('/posts');
     }
 
     public function imageUpload(Request $request){
