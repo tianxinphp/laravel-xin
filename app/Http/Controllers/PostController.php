@@ -43,7 +43,7 @@ class PostController extends Controller
 
     }
 
-    public function upload(){
+    public function imageUpload(){
         dd(request()->all());
     }
 }
