@@ -1,3 +1,3 @@
 var E = window.wangEditor;
-var editor = new E('#contents');
+var editor = new E('#content');
 editor.create();
