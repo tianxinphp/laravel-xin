@@ -13,7 +13,7 @@ class RegisterController extends Controller{
     }
 
     public function register(){
-        $this->validate(\Request::all(),[
+        $this->validate(\Request::instance(),[
             'name'=>'required|min:6|unique:users,name',
             'email'=>'required|unique:users,email|email',
             'password'=>'required|min:6|max:10|confirmed'
