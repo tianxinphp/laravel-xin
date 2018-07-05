@@ -31,3 +31,5 @@ Route::get('/posts/{post}/delete','PostController@delete');
 
 //上传
 Route::post('/posts/image/upload','PostController@imageUpload');
+
+Route::get('/register','RegisterController@index');
