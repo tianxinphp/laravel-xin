@@ -33,3 +33,5 @@ Route::get('/posts/{post}/delete','PostController@delete');
 Route::post('/posts/image/upload','PostController@imageUpload');
 
 Route::get('/register','RegisterController@index');
+
+Route::post('/register','RegisterController@register');
