@@ -32,7 +32,7 @@
 <body>
 
 <div class="container">
-
+    @include('layout.error')
     <form class="form-signin" method="POST" action="/register">
         {{csrf_field()}}
         <h2 class="form-signin-heading">请注册</h2>
