@@ -26,7 +26,6 @@ class PostController extends Controller
         $post->title=request('title');
         $post->content=request('content');
         $post->user_id=\Auth::id();
-        dd($post->user_id);
         $post->save();
         return redirect('/posts');
     }
