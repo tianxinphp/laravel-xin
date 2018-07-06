@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="/user/5">我的主页</a></li>
                         <li><a href="/user/5/setting">个人设置</a></li>
-                        <li><a href="/logout">登出</a></li>
+                        <li><a href="/loginOut">登出</a></li>
                     </ul>
                 </div>
             </li>
