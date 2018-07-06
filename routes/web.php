@@ -35,3 +35,8 @@ Route::post('/posts/image/upload','PostController@imageUpload');
 Route::get('/register','RegisterController@index');
 
 Route::post('/register','RegisterController@register');
+
+Route::get('/login','LoginController@index');
+
+Route::post('/login','LoginController@login');
+
