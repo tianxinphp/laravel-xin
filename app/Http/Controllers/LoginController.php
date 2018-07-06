@@ -26,7 +26,7 @@ class LoginController extends Controller
         if(\Auth::attempt($user,$is_remember)){
             return redirect('/posts');
         }
-        return \Redirect::back();
+        return \Redirect::back()->withErrors('账号密码错误');
     }
 
     public function loginOut(){
