@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -59,5 +60,17 @@ class PostController extends Controller
     public function imageUpload(Request $request){
         $path=$request->file('wangEditorH5File')->storePublicly(md5(time()));
         return asset('storage/'.$path);
+    }
+
+    public function comment(Post $post){
+        $this->validate(\request()->instance(),[
+           'content'=>'required|min:3'
+        ]);
+        $comment=new Comment();
+        $comment->user_id=\Auth::id();
+        $comment->content=request('content');
+        $post->comments()->save($comment);
+        return back();
+
     }
 }

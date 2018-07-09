@@ -29,6 +29,8 @@ Route::put('/posts/{post}','PostController@update');
 //删除
 Route::get('/posts/{post}/delete','PostController@delete');
 
+Route::post('/posts/{post}/comment','PostController@comment');
+
 //上传
 Route::post('/posts/image/upload','PostController@imageUpload');
 
@@ -41,3 +43,5 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@login');
 
 Route::get('/loginOut','LoginController@loginOut');
+
+
