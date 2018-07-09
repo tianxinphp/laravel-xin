@@ -43,6 +43,7 @@ class PostController extends Controller
             'title' => 'required|unique:posts|max:100',
             'content' => 'required',
         ]);
+        $this->authorize('update',$post);
         $post->title=request('title');
         $post->content=request('content');
         $post->save();
@@ -50,6 +51,7 @@ class PostController extends Controller
     }
 
     public function delete(Post $post){
+        $this->authorize('delete',$post);
         $post->delete();
         return redirect('/posts');
     }
