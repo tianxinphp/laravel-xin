@@ -31,6 +31,10 @@ Route::get('/posts/{post}/delete','PostController@delete');
 
 Route::post('/posts/{post}/comment','PostController@comment');
 
+Route::post('posts/{post}/zan','PostController@zan');
+
+Route::post('posts{post}/unZan','PostController@unZan');
+
 //上传
 Route::post('/posts/image/upload','PostController@imageUpload');
 
@@ -43,5 +47,8 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@login');
 
 Route::get('/loginOut','LoginController@loginOut');
+
+
+
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Post;
+use App\Zan;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -72,6 +73,19 @@ class PostController extends Controller
         $comment->content=request('content');
         $post->comments()->save($comment);
         return back();
+    }
 
+    public function zan(Post $post){
+        $param=[
+            'user_id'=>\Auth::id(),
+            'post_id'=>$post->id
+        ];
+        Zan::firstOrCreate($param);
+        return back();
+    }
+
+    public function unZan(Post $post){
+        $post->zan(\Auth::id())->delete();
+        return back();
     }
 }
