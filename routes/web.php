@@ -33,7 +33,7 @@ Route::post('/posts/{post}/comment','PostController@comment');
 
 Route::get('posts/{post}/zan','PostController@zan');
 
-Route::get('posts{post}/unZan','PostController@unZan');
+Route::get('posts/{post}/unZan','PostController@unZan');
 
 //上传
 Route::post('/posts/image/upload','PostController@imageUpload');
