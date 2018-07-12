@@ -139,6 +139,7 @@ return [
     'providers' => [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Overtrue\LaravelLang\TranslationServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
         /*
          * Laravel Framework Service Providers...
          */
