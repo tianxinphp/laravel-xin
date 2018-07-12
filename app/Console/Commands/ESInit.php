@@ -11,14 +11,14 @@ class ESInit extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'es:init';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'es init';
 
     /**
      * Create a new command instance.
@@ -38,5 +38,6 @@ class ESInit extends Command
     public function handle()
     {
         //
+
     }
 }
