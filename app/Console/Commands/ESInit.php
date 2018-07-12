@@ -85,7 +85,7 @@ class ESInit extends Command
                 ]
             ]
         ];
-        $client->put($url,$indexParam);
+        $client->put($indexUrl,$indexParam);
         $this->info('Create index successfully');
     }
 }
