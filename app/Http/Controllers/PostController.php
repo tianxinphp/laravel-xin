@@ -93,6 +93,8 @@ class PostController extends Controller
         $this->validate(\Request::instance(),[
             'query'=>'required'
         ]);
-        return view('post.search');
+        $query=request('query');
+        $posts=Post::search($query)->paginate(2);
+        return view('post/search',compact('posts'));
     }
 }
