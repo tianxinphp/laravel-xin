@@ -65,7 +65,7 @@ class PostController extends Controller
     }
 
     public function comment(Post $post){
-        $this->validate(\Request()::instance(),[
+        $this->validate(\Request::instance(),[
            'content'=>'required|min:3'
         ]);
         $comment=new Comment();
