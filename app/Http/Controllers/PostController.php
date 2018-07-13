@@ -88,4 +88,8 @@ class PostController extends Controller
         $post->zan(\Auth::id())->delete();
         return back();
     }
+
+    public function search(){
+        return view();
+    }
 }
