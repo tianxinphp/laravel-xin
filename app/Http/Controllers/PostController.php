@@ -65,7 +65,7 @@ class PostController extends Controller
     }
 
     public function comment(Post $post){
-        $this->validate(\request()->instance(),[
+        $this->validate(\Request()::instance(),[
            'content'=>'required|min:3'
         ]);
         $comment=new Comment();
@@ -90,6 +90,9 @@ class PostController extends Controller
     }
 
     public function search(){
+        $this->validate(\Request::instance(),[
+            'query'=>'required'
+        ]);
         return view('post.search');
     }
 }
