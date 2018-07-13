@@ -15,6 +15,7 @@ class CreateFansTable extends Migration
     {
         Schema::create('fans', function (Blueprint $table) {
             $table->increments('id');
+
             $table->timestamps();
         });
     }
