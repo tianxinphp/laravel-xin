@@ -90,6 +90,6 @@ class PostController extends Controller
     }
 
     public function search(){
-        return view();
+        return view('post.search');
     }
 }
