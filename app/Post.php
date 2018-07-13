@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-use laravel\Scout\Searchable;
+use Laravel\Scout\Searchable;
 
 class Post extends Model
 {
