@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     //
     public function show(User $user){
-        $user=User::find($user->id)->withCount(['fans','stars','posts']);
+        $user=User::withCount(['fans','stars','posts'])->find($user->id);
         $post=$user->posts()->orderBy('created_at','desc')->take(10)->get();
         $fans=$user->fans;
         $fusers=User::whereIn('id',$fans->pluck('fan_id'))->withCount(['fans','stars','posts'])->get();
