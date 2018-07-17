@@ -9,6 +9,7 @@ class UserController extends Controller
 {
     //
     public function show(User $user){
+        dd($user);
         $user=User::find($user->id)->withCount(['fans','stars','posts']);
         dd($user);
         $post=$user->posts()->orderBy('created_at','desc')->take(10)->get();
