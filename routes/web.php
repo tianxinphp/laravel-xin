@@ -49,6 +49,23 @@ Route::post('/login','LoginController@login');
 
 Route::get('/loginOut','LoginController@loginOut');
 
+Route::get('/user/{user}','UserController@show');
+
+Route::post('/user/{user}/fan','UserController@fan');
+
+Route::post('/user/{user}/unfan','UserController@unfan');
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
