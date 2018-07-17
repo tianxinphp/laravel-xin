@@ -13,7 +13,7 @@ class Fan extends Model
 
     //关注
     public function suser(){
-        return $this->hasOne('App\User','id','fan_id');
+        return $this->hasOne('App\User','id','start_id');
     }
 
 
