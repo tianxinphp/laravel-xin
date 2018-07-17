@@ -15,6 +15,7 @@ class UserController extends Controller
         $fusers=User::whereIn('id',$fans->pluck('fan_id'))->withCount(['fans','stars','posts'])->get();
         $stars=$user->stars;
         $susers=User::whereIn('id',$stars->pluck('start_id'))->withCount(['fans','stars','posts'])->get();
+        dd($fusers,$susers);
         return view('user/show',compact('user','post','fusers','susers'));
     }
 
