@@ -20,4 +20,5 @@ class Fan extends Model
 
 
 
+
 }
