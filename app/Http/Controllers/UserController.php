@@ -18,11 +18,15 @@ class UserController extends Controller
         return view('user/show',compact('user','posts','fusers','susers'));
     }
 
-    public function fan(){
-
+    public function fan(User $user){
+        $me=\Auth::user();
+        $me->doFan($user->id);
+        return [];
     }
 
-    public function unfan(){
-
+    public function unfan(User $user){
+        $me=\Auth::user();
+        $me->unFan($user->id);
+        return [];
     }
 }

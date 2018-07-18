@@ -42,6 +42,20 @@ class User extends Authenticatable
         return $this->hasMany('App\Fan','fan_id','id');
     }
 
+
+    public function doFan($uid){
+        $fan=new \App\Fan();
+        $fan->star_id=$uid;
+        $this->stars()->save($fan);
+    }
+
+    public function unFan($uid){
+        $fan=new \App\Fan();
+        $fan->star_id=$uid;
+        $this->stars()->delete($fan);
+    }
+
+
     //被多少人关注
     public function hasFan($uid){
         return $this->fans()->where('star_id',$uid)->count();
