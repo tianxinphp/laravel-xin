@@ -16,73 +16,13 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab_1">
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                        <p class=""><a href="/posts/62" >你好你好</a></p>
-
-
-                        <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                        <p class=""><a href="/posts/61" >你好你好</a></p>
-
-
-                        <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                        <p class=""><a href="/posts/60" >你好你好</a></p>
-
-
-                        <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                        <p class=""><a href="/posts/59" >你好你好</a></p>
-
-
-                        <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1周前</p>
-                        <p class=""><a href="/posts/58" >自动放大舒服的撒</a></p>
-
-
-                        <p>我们坚持一个中国我们坚持一个中国我们坚持一个中国我们坚持一个中国我们坚持一个中国我们坚持一个中国我们...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1周前</p>
-                        <p class=""><a href="/posts/57" >反对撒发的撒风反对撒发的撒风反对撒发的撒风</a></p>
-
-
-                        <p>反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1周前</p>
-                        <p class=""><a href="/posts/56" >dfdasfd</a></p>
-
-
-                        <p>vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadf...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1个月前</p>
-                        <p class=""><a href="/posts/55" >32323</a></p>
-
-
-                        <p>232323232323232323232323232323232323232323232323232323
-                            232323232323232323232323
-                            232323232323232323...</p>
-                    </div>
-                    <div class="blog-post" style="margin-top: 30px">
-                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1个月前</p>
-                        <p class=""><a href="/posts/54" >dafdsafads</a></p>
-
-
-                        <p>dafdsafadsdafdsafadsdafdsafadsdafdsafads
-
-                            dafdsafadsdafdsafadsdafdsafadsdafdsafadsdafdsafadsdafdsa...</p>
-                    </div>
+                    @foreach($posts as $post)
+                        <div class="blog-post" style="margin-top: 30px">
+                            <p class=""><a href="/user/{{$post->user_id}}">{{$post->user->name}}</a> 6天前</p>
+                            <p class=""><a href="/posts/{{$post->id}}" >你好你好</a></p>
+                            <p>{!! str_limit($post->content,100,'...') !!}</p>
+                        </div>
+                    @endforeach
                 </div>
                 <!-- /.tab-pane -->
                 <div class="tab-pane" id="tab_2">
