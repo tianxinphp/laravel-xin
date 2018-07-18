@@ -19,7 +19,7 @@
                     @foreach($posts as $post)
                         <div class="blog-post" style="margin-top: 30px">
                             <p class=""><a href="/user/{{$post->user_id}}">{{$post->user->name}}</a> 6天前</p>
-                            <p class=""><a href="/posts/{{$post->id}}" >你好你好</a></p>
+                            <p class=""><a href="/posts/{{$post->id}}" >{{$post->title}}</a></p>
                             <p>{!! str_limit($post->content,100,'...') !!}</p>
                         </div>
                     @endforeach
